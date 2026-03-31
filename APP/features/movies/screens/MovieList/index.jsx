@@ -1,18 +1,27 @@
 import React from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList, Text, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
 import { ROUTES } from "../../../../constants/routes";
+import styles from "./styles";
+
+const cardWidth = (Dimensions.get("window").width - 24) / 2;
 
 export default function MovieList() {
   const { movies, loading } = useMovies();
   const navigation = useNavigation();
 
-  if (loading) { return <Text>Carregando...</Text>;}
+  if (loading) { 
+    return (
+      <View style={styles.container}>
+        <Text style={styles.loadingText}>Carregando...</Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={{ padding: 16, flex: 1 }}>
+    <View style={styles.container}>
       <FlatList
         style={{ flex: 1 }}
         data={movies}
@@ -27,7 +36,7 @@ export default function MovieList() {
                 movie: item,
               })
             }
-            width={"45vw"}
+            width={cardWidth}
           />
         )}
       />
