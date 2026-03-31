@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:3000";
+export const API_URL = "https://jubilant-succotash-jj7vxgw4p6v42qpw-3000.app.github.dev/";
