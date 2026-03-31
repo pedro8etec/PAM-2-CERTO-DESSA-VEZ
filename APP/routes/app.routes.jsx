@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { ROUTES } from "../constants/routes";
 
-import { MovieList, MovieDetails, CreateMovie } from "../features/movies";
+import { MovieList, MovieDetails, CreateMovie, ActorDetails } from "../features/movies";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +29,12 @@ export default function AppRoutes() {
           name={ROUTES.CREATE_MOVIE}
           component={CreateMovie}
           options={{ title: "Cadastrar Filme" }}
+        />
+
+        <Stack.Screen
+          name={ROUTES.ACTOR_DETAILS}
+          component={ActorDetails}
+          options={{ title: "Detalhes do Ator" }}
         />
 
       </Stack.Navigator>
