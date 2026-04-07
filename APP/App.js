@@ -19,4 +19,3 @@ export default function App() {
 //         ↓
 // Hook atualiza estado
 //         ↓
-// Screen renderiza componentes
