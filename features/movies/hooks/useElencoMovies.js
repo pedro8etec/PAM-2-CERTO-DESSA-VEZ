@@ -1,12 +1,12 @@
 import { use, useEffect, useState } from 'react';
-import { getElencoMovies } from '../services/movieService';
+import { getElencoMovie } from '../services/movieService';
 
 export const useElencoMovies = (movieId) => {
   const [elenco, setElenco] = useState([]);
 
   useEffect(() => {
     (async () => {
-        const data = await getElencoMovies(movieId);
+        const data = await getElencoMovie(movieId);
         setElenco(data);
     })();
   }, []);

@@ -21,6 +21,7 @@ export default function ActorDetails() {
       <Image
         source={{ uri: actor.imagem }}
         style={styles.actorImage}
+        resizeMode="cover"
       />
 
       {/* Nome do Ator */}

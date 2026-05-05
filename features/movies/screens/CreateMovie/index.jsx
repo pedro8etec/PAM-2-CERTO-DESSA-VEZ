@@ -1,11 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
-import styles from "./styles";
 
 export default function CreateMovie() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Cadastrar Filme</Text>
+    <View>
+      <Text>Cadastrar Filme</Text>
     </View>
   );
 }
