@@ -7,7 +7,7 @@ export default StyleSheet.create({
   image: {
     width: 100, height: 140, borderRadius: 8
   },
-  personagem: {
+  personagem:{
     fontSize: 12
   }
 });

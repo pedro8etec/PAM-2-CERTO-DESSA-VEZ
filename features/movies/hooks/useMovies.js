@@ -28,6 +28,19 @@ export const useMovies = () => {
   };
 };
 
+export const useElencoMovie = (movieId) => {
+  const [elenco, setElenco] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getElencoMovie(movieId);
+      setElenco(data);
+    })();
+  }, []);
+
+  return { elenco };
+};
+
 /*
 O hook useMovies é responsável por gerenciar o estado dos filmes e o estado de carregamento. 
 Ele utiliza a função getMovies do serviço movieService para buscar os dados da API. 

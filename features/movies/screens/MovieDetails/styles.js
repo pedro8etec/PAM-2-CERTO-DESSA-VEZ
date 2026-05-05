@@ -7,10 +7,12 @@ export default StyleSheet.create({
   image: {
     width: "100%",
     height: 300,
-    borderRadius: 8,
+    borderRadius: 8
   },
   title: {
-    fontSize: 22, fontWeight: "bold", marginTop: 12
+    fontSize: 22, 
+    fontWeight: "bold", 
+    marginTop: 12
   },
   year: {
     fontSize: 16,

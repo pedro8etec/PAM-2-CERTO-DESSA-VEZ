@@ -13,7 +13,7 @@ export async function getPopularFilmes(){
 
 
 export const getElencoMovie = async (movieId) => {
-  const response = await api.get(`/movies/${movieId}/credits`,{
+  const response = await api.get(`/movie/${movieId}/credits`, {
     params: {
       language: "pt-BR"
     },
@@ -25,4 +25,4 @@ export const getElencoMovie = async (movieId) => {
     personagem: actor.character,
     imagem: `https://image.tmdb.org/t/p/w200${actor.profile_path}`,
   }));
-}
+};
